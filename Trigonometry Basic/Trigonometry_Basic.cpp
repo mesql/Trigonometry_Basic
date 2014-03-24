@@ -22,7 +22,7 @@ int main(){
 	//Ask for function
 	cout << "\nYou are using the number ";
 	cout << angle;
-	cout << ", please enter a function (Sin/Cos/Tan):\n\n";
+	cout << ", please enter a function (Sin/Cos/Tan/Csc/Sec/Cot):\n\n";
 	
 	//Get function from user
 	cin >> function;
@@ -41,7 +41,16 @@ int main(){
 	if (function == "Tan"){
 		TanFunc(angle);
 	}
-	else if (function != "Sin" && function == "Cos" && function == "Tan"){
+	if (function == "Csc"){
+		CscFunc(angle);
+	}
+	if (function == "Sec"){
+		SecFunc(angle);
+	}
+	if (function == "Cot"){
+		CotFunc(angle);
+	}
+	else if (function != "Sin" && function == "Cos" && function == "Tan" && function == "Csc" && function == "Sec" && function == "Cot"){
 		cout << "Error! You did not specify a proper angle / function.  Please refer to the \nwarning message on program startup and try again.\n\n";
 	}
 	//system("pause");
