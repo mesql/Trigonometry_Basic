@@ -2,9 +2,9 @@
 #include <cmath>
 #include <string>
 #include "TrigFunc.h"
+using namespace std;
 
 int main(){
-	using namespace std;
 	
 	//Variables to store input in
 	int angle = 0;
@@ -31,6 +31,7 @@ int main(){
 	system("cls");
 
 	//If functions to determine what function to use and output commands.
+	
 	if (function == "Sin"){
 		SinFunc(angle);
 	}
@@ -40,9 +41,13 @@ int main(){
 	if (function == "Tan"){
 		TanFunc(angle);
 	}
-	else{
-		cerr << "Error! You did not specify a proper angle / function.  Please refer to the \nwarning message on program startup and try again.\n\n";
+	else if (function != "Sin" && function == "Cos" && function == "Tan"){
+		cout << "Error! You did not specify a proper angle / function.  Please refer to the \nwarning message on program startup and try again.\n\n";
 	}
-	system("pause");
+	//system("pause");
+
+	cout << "Please press enter to continue: ";
+	cin.ignore();
+	cin.get();
 	return 0;
 }
