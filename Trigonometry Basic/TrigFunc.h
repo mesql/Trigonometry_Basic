@@ -1,8 +1,10 @@
 #include <iostream>
 using namespace std;
 
+double Pi = 3.141592654;
+
 // Function for Sine
-void SinFunc(int x){
+void SinFunc(double x){
 
 	cout << "The Sine of ";
 	cout << x;
@@ -12,7 +14,7 @@ void SinFunc(int x){
 }
 
 // Function for Cosine
-void CosFunc(int x){
+void CosFunc(double x){
 
 	cout << "The Cosine of ";
 	cout << x;
@@ -22,7 +24,7 @@ void CosFunc(int x){
 }
 
 // Function for Tangent
-void TanFunc(int x){
+void TanFunc(double x){
 
 	cout << "The Tangent of ";
 	cout << x;
@@ -31,7 +33,8 @@ void TanFunc(int x){
 	cout << "\n\n";
 }
 
-void CscFunc(int x){
+// Function for Co-Secant
+void CscFunc(double x){
 	cout << "The Co-secant of ";
 	cout << x;
 	cout << " is ";
@@ -39,7 +42,8 @@ void CscFunc(int x){
 	cout << "\n\n";
 }
 
-void SecFunc(int x){
+// Function for Secant
+void SecFunc(double x){
 	cout << "The Secant of ";
 	cout << x;
 	cout << " is ";
@@ -47,10 +51,65 @@ void SecFunc(int x){
 	cout << "\n\n";
 }
 
-void CotFunc(int x){
+// Function for Co-Tangent
+void CotFunc(double x){
 	cout << "The Co-Tangent of ";
 	cout << x;
 	cout << " is ";
 	cout << 1/(tan(x*0.0174532888888889));
+	cout << "\n\n";
+}
+
+// Function for Sin, using radians
+void SinRad(double x){	
+	cout << "The Sine of ";
+	cout << x;
+	cout << " is ";
+	cout << sin(x);
+	cout << "\n\n";
+}
+
+// Function for Cos, using radians
+void CosRad(double x){
+	cout << "The Cosine of ";
+	cout << x;
+	cout << " is ";
+	cout << cos(x);
+	cout << "\n\n";
+}
+
+// Function for Tangent, using radians
+void TanRad(double x){
+	cout << "The Tangent of ";
+	cout << x;
+	cout << " is ";
+	cout << tan(x);
+	cout << "\n\n";
+}
+
+// Function for Co-Secant, using radians
+void CscRad(double x){
+	cout << "The Co-Secant of ";
+	cout << x;
+	cout << " is ";
+	cout << 1/sin(x);
+	cout << "\n\n";
+}
+
+// Function for Secant, using radians
+void SecRad(double x){
+	cout << "The Secant of ";
+	cout << x;
+	cout << " is ";
+	cout << 1/cos(x);
+	cout << "\n\n";
+}
+
+// Function for Co-Tangent, using radians
+void CotRad(double x){
+	cout << "The Co-Tangent of ";
+	cout << x;
+	cout << " is ";
+	cout << 1/tan(x);
 	cout << "\n\n";
 }
