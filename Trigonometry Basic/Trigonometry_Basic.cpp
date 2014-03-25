@@ -11,7 +11,6 @@ int main(){
 	double radians = 0;
 	string function = "Default";
 	string measurement = "Default";
-	char use;
 
 	//Display warning that program is case-sensetive
 	cout << "Warning, this program's function entry code is case-sensetive, please type \nfunctions exactly as directed.\n\n\n\n";
@@ -22,10 +21,10 @@ int main(){
 	//Get angle from user
 	cin >> measurement;
 	
-	use = measurement[0];	//The first character in the measurement string
+	//use = measurement[0];	//The first character in the measurement string
 	
 
-	switch(use){
+	switch(measurement[0]){
 		
 	case 'D':	//If the user enters D or d, They are using degrees
 	case 'd':
@@ -44,27 +43,33 @@ int main(){
 		//If statements for input
 
 		if (function == "Sin"){ 
-			SinFunc(angle);
+			radians = ConvertToRad(angle);
+			SinFunc(radians, angle);
 		}
 		
 		if (function == "Cos"){
-			CosFunc(angle);
+			radians = ConvertToRad(angle);
+			CosFunc(radians,angle);
 		}
 		
 		if (function == "Tan"){
-			TanFunc(angle);
+			radians = ConvertToRad(angle);
+			TanFunc(radians,angle);
 		}
 		
 		if (function == "Csc"){
-			CscFunc(angle);
+			radians = ConvertToRad(angle);
+			CscFunc(radians,angle);
 		}
 		
 		if (function == "Sec"){
-			SecFunc(angle);
+			radians = ConvertToRad(angle);
+			SecFunc(radians,angle);
 		}
 		
 		if (function == "Cot"){
-			CotFunc(angle);
+			radians = ConvertToRad(angle);
+			CotFunc(radians,angle);
 		}
 		
 		else if (function != "Sin" && function == "Cos" && function == "Tan" && function == "Csc" && function == "Sec" && function == "Cot"){
@@ -117,9 +122,8 @@ int main(){
 		}
 		break;
 	}
-	
-	
-	cout << "Please press enter to continue: ";
+
+	cout << "Please press enter to close: ";
 	cin.ignore();
 	cin.get();
 	return 0;
